@@ -1,0 +1,24 @@
+JavaScript Hoisting: Hoisting is JavaScript's default behavior of moving declarations to the top.
+
+JavaScript Declarations are Hoisted
+In JavaScript, a variable can be declared after it has been used.
+
+In other words; a variable can be used before it has been declared.
+
+var a; = variable declaration
+a=10, = variable initialiazation
+
+Hoisting example: 
+
+var a =10;
+document.write(a);
+var b=20;
+
+compile phase:
+
+var a;
+var b;
+a=10;
+document.write(a);
+b=20;
+

@@ -1,0 +1,54 @@
+What is an event loop in JavaScript ?
+JavaScript is a single-threaded synchronous programming language.
+
+What does it actually mean when we say JavaScript is single threaded?
+
+It means that the main thread where JavaScript code is run, 
+runs in one line at a time manner and there is no possibility of running code in parallel.
+onsole.log("Before delay");
+  
+function delayBySeconds(sec) {
+   let start = now = Date.now()
+   while(now-start < (sec*1000)) {
+     now = Date.now();
+   }
+}
+  
+delayBySeconds(5);
+  
+// Executes after delay of 5 seconds
+console.log("After delay");
+
+output:
+Before delay
+(... waits for 5 seconds)
+After delay
+
+Memory allocation in JavaScript:
+1) Heap memory: Data stored randomly and memory allocated.
+
+2) Stack memory: Memory allocated in the form of stacks. Mainly used for functions.
+
+Function call stack: The function stack is a function which keeps track of all other functions executed in run time. 
+Ever seen a stack trace being printed when you ran into an error in JavaScript. 
+That is nothing but a snapshot of the function stack at that point when the error occurred.
+
+function LevelTwo() {
+   console.log("Inside Level Two!")
+}
+  
+function LevelOne() {
+   LevelTwo()
+}
+  
+function main() {
+   LevelOne()
+}
+  
+main()
+
+
+event loop: Event loop: An event loop is something that pulls stuff out of the queue and places it onto the function 
+execution stack whenever the function stack becomes empty.
+
+
