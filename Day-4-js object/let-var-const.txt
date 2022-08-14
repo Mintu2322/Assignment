@@ -1,0 +1,80 @@
+There are 3 ways to create variables in JavaScript:
+let:
+var:
+const:
+
+let == block scope
+var == function scope
+const == block scope like let but immutable
+
+1) var: If we declare a variable from var then we can also declare it again with the same 
+name and if we want to reassign it's value then we can do that too.
+
+declare a variable:
+
+var demo = "first value";
+var demo = "second value";
+demo = "third value";
+example = "this throws an error - variable not declared";
+
+The “scope” of a variable describes where it can be used.
+ A function-scoped variable can be accessed by code in the function that defines it. 
+ A global variable is accessible throughout your code.
+           var myGlobal = "global";
+ 
+function testA() {
+    var myFunctionScope = "testA";
+    console.log(myFunctionScope);
+    console.log(myGlobal);
+}
+ 
+function testB() {
+    myGlobal = "overwritten!";
+    console.log(myGlobal);
+   // console.log(myFunctionScope);          // ERROR
+}
+ 
+testA();
+testB();
+testA();
+
+output:
+testA
+global
+
+overwritten!
+
+testA
+overwritten!
+
+
+
+
+
+2) let: If we declare a variable with let then we cannot declareit again with the same Name
+but can reassign it's value.
+
+function letTest(x) {
+    let demo = "hello world";
+ 
+    if (x > 10) {
+        let y = 9000;
+        demo = "foobar";
+    }
+ 
+    console.log(demo);  // "foobar"
+    console.log(y);     // ERROR
+}
+
+
+
+
+3) const: If we declare a variable with const then we can neither declare it again nor can 
+reassign it's value.
+
+let demoLet;                    // OK
+var demoVar;                    // OK
+const demoConst;                // ERROR
+const demoConst = "value";      // OK
+
+
