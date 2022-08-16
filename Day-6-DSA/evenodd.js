@@ -1,4 +1,4 @@
-const array2 = [10,30,65,6009,2322,1212];
+const array2 = [10,30,65,6009,2322,1212,2124,5131,50,76,89,90,1002];
 
 function evenElements(array) {
     const even =[];
