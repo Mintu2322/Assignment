@@ -1,11 +1,10 @@
 Definations:
 
-Synchronous : every statement of the code gets executed one by one. 
-So, basically a statement has to wait for the earlier statement to get executed.
+Synchronous : Synchronous method call wait for the method to complete before continuing with program.
 
-
-Asynchronous : Asynchronous code allows the program to be executed immediately where the synchronous code will block further execution of the remaining code until it finishes the current one. 
-This may not look like a big problem but when you see it in a bigger picture you realize that it may lead to delaying the User Interface.
+Asynchronous : The time talking function.
+  
+  //async await // .then.catch // interval (time) //
 
 
 API's Definations :
