@@ -1,0 +1,19 @@
+{
+  "name": "day-9-firstaap",
+  "version": "1.0.0",
+  "description": "sample aap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mintu2322/Assignment.git"
+  },
+  "author": "mintu nagar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mintu2322/Assignment/issues"
+  },
+  "homepage": "https://github.com/Mintu2322/Assignment#readme"
+}
