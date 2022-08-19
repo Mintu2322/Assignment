@@ -1,26 +1,32 @@
-let myPromise = new Promise(function(resolve, reject) {
-    setTimeout(function() {
-         resolve("Hello Mintu"); 
-        }, 3000);
-  });
-  console.log(myPromise);
+// let res = new Promise((resolve,reject)=>{
+//   let a = 10;
+//  if (a===10){
+//   resolve("promise resolved")
+// ;}
+//   else{
+//     reject("promise rejected");
+//   }
+// });
+// console.log(res);
 
 
-  let promise = new Promise(function(resolve, reject) {
-    // after 1 second signal that the job is finished with an error
-    setTimeout(() => 
-    reject(new Error("This is mintu nagar")
-    ), 1000);
+  let promise = new Promise((resolve, reject) => {
+      let a = 10;
+      if(a===10){
+      resolve("Hii Mintu Here");
+    }
+    else{
+          reject("promise rejected");
+       }
   });
   console.log(promise);
-
-  let newpromise = new Promise(function(resolve, reject) {
-    resolve("done");
+  // let newpromise = new Promise(function(resolve, reject) {
+  //   resolve("done");
   
-    reject(new Error("…")); // ignored
-    setTimeout(() => resolve("…")); // ignored
-  });
+  //   reject(new Error("…")); // ignored
+  //   setTimeout(() => resolve("…")); // ignored
+  // });
 
-  console.log(newpromise);
+  // console.log(newpromise);
 
   
